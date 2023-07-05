@@ -7,7 +7,7 @@ import Home from "../Screens/Home";
 export const Routes = createBrowserRouter([
     {
         path:'/',
-        element:<Home/>
+        element: <Home/>
     },
     {
         path:'/Details',
