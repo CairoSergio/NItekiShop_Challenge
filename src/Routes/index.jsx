@@ -4,7 +4,7 @@ import Cart from "../Screens/Cart";
 import Details from "../Screens/Details";
 import Home from "../Screens/Home";
 
-export const Routes = createBrowserRouter([
+export const Routes = createBrowserRouter([    
     {
         path:'/',
         element: <Home/>
