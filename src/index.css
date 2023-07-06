@@ -1,3 +1,4 @@
+
 :root {
   --primary-color:#1E5AFA;
   --grey-low:#F0F0F5;
@@ -11,4 +12,10 @@
 body{
   height: 100%;
   width: 100%;
+  background-color: var(--grey-low);
+  font-family: 'Inter', sans-serif;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list .Mui-selected{
+  font-weight: 700;
 }
