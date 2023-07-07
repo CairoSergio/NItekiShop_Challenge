@@ -1,3 +1,4 @@
+import React from 'react'
 import { AppBar,Link, Container, IconButton, Box } from "@mui/material";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import SearchInput from "./SearchInput";

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Box, Button} from "@mui/material";
 import TuneIcon from '@mui/icons-material/Tune';
 import FilterMenu from "./FiltersMenu";
