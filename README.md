@@ -1,1 +1,1 @@
-# NItekiShop_Challenge
+# NtekiShop Challenge
