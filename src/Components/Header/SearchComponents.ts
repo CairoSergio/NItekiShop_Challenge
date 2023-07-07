@@ -8,10 +8,10 @@ export const Search = styled('div')(({ theme }) => ({
   '&:hover': {
     backgroundColor: alpha('#E3E3E3', 0.25),
   },
-  marginLeft: 0,
+  marginRight: '3rem',
   width: '100%',
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(1),
+    marginRight: '2rem',
     width: 'auto',
   },
 }));
