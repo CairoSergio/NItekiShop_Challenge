@@ -6,25 +6,37 @@ import { FormatNumber } from '../../utils/FormatNumer';
 import { useDispatch, useSelector } from'react-redux'
 import { useRoutes } from 'react-router-dom'
 import { targetProduct } from '../../Features/Products/ProductsSlice';
+import AddProducts from '../../utils/AddProduct';
+import getProductsCart from '../../utils/GetProductsCart';
 export default function ProductCard(props: productInerface){
-    const dispach = useDispatch()
-    const produto = useSelector((state:any)=> state.product.product)
-    useEffect(()=>{
-        console.log(JSON.stringify(props))
-    },[produto])
-    const prod ={nome:'çairo'}
+    const dispatch = useDispatch()
+    const prod:productInerface = {
+        id: props.id,
+        image: props.image.replace('https://i.pinimg.com/', '').replace('.jpg', ''),
+        location: props.location,
+        price: props.price,
+        title: props.title,
+        category: props.category,
+        description: props.description,
+    }
+    const parsed =  JSON.stringify(prod)
+    const encode  = encodeURIComponent(parsed)
+    const handleAddProduct = () =>{
+        AddProducts(props)
+        dispatch(targetProduct())
+    }
     return(
         <Card
             sx={{
-                width: '18rem',
+                width: '17rem',
                 height: '24rem',
-                color:'#3F4046'
+                color:'#3F4046',
             }}
             
         >
             <CardActionArea
-            href={`/Details?produto=${encodeURIComponent(JSON.stringify(prod))}`}
-                // onClick={()=>console.log(props)}
+            href={`/Details/${encode}`}
+                onClick={()=>console.log(parsed)}
             >
 
                 <CardMedia
@@ -33,8 +45,8 @@ export default function ProductCard(props: productInerface){
                     image={props.image}
                 />
                 <Typography
-                py={0.65}
-                px={1.25}
+                    py={0.65}
+                    px={1.25}
                 >
                     {props.title}
                 </Typography>
@@ -43,7 +55,6 @@ export default function ProductCard(props: productInerface){
                 px={1.25}
                 fontWeight={700}
                 >
-                    {/* 73,900.00MT */}
                     {FormatNumber(props.price)}.00MT
                 </Typography>
                 <Typography
@@ -52,14 +63,13 @@ export default function ProductCard(props: productInerface){
                     fontSize="0.6rem"
                     fontWeight={400}
                 >
-                    {/* Cidade de Maputo e Matola */}
                     {props.location}
                 </Typography>
             </CardActionArea>
             <Box
                 px={0.75}
             >
-                <Button onClick={()=> console.log('Button')} sx={{zIndex:11111,width:'100%', gap:'0.5rem',fontSize:'0.75rem', height:'2rem', bgcolor:"var(--primary-color)"}} variant='contained'>
+                <Button onClick={handleAddProduct} sx={{width:'100%', gap:'0.5rem',fontSize:'0.75rem', height:'2rem', bgcolor:"var(--primary-color)"}} variant='contained'>
                     ADICIONAR AO CARINHO
                     <ShoppingCartIcon sx={{fontSize:'1rem'}}/>
                 </Button>

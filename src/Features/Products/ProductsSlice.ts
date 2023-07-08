@@ -1,16 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { productInerface } from '../../types/ProductInterface'
+import getProductsCart from '../../utils/GetProductsCart'
 
 const initialState = {
-    product: {}
+    product: getProductsCart()
 }
 
 const productSlice = createSlice({
     name:"produtos",
     initialState,
     reducers:{
-        targetProduct: (state, action ) =>{
-            state.product = action
+        targetProduct: (state) =>{
+            state.product = getProductsCart()
         }
     }
 }) 

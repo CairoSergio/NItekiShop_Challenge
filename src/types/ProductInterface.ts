@@ -6,6 +6,6 @@ export interface productInerface{
     title: string,
     price: number,
     location: string,
-    descritioon?: string,
+    description?: string,
     category?: filterBy,
 }
