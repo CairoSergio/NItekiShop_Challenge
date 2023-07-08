@@ -66,7 +66,7 @@ export default function Cart(){
                     </Box>
                     <Box mb="1.20rem" display="flex" mt="0.88rem" color="#2E2F37"  fontWeight={400} justifyContent="space-between">
                         <Typography>
-                            Valor de entrga
+                            Valor de entrega
                         </Typography>
                         <Typography>
                             500.00MT
@@ -78,12 +78,58 @@ export default function Cart(){
                             Total
                         </Typography>
                         <Typography color="#2E2F37" fontSize="1rem" fontWeight="700">
-                            {FormatNumber(Total + 500)}.00MT
+                            {Total &&  FormatNumber(Total + 500)}.00MT
                         </Typography>
                     </Box>
                     <Button sx={{bgcolor:'#2DB54B',":hover":{bgcolor:"#51b767"}, mt:'5rem', width:'100%'}} variant="contained">
                         Finalizar Compra
                     </Button>
+                    <Box
+                        position={`${isSmallScreen ?"relative" : 'absolute'}`}
+                        bottom={3}
+                        mt={6}
+                        gap={0.3}
+                        display="flex"
+                        flexDirection="column"
+                    >
+                        <Typography
+                        fontWeight={500}
+                        sx={{cursor:'pointer', textDecorationLine:'underline'}}
+                        fontSize="0.85rem"
+                        color="#617480"
+
+                        >
+                            AJUDA
+                        </Typography>
+                        <Typography
+                        fontWeight={500}
+                        fontSize="0.85rem"
+                        sx={{cursor:'pointer', textDecorationLine:'underline'}}
+                        color="#617480"
+
+                        >
+                            REEMBOLSO
+                        </Typography>
+                        <Typography
+                        fontWeight={500}
+                        fontSize="0.85rem"
+                        sx={{cursor:'pointer', textDecorationLine:'underline'}}
+                        color="#617480"
+
+                        >
+                            ENTREGAS E FRETE
+                        </Typography>
+                        <Typography
+                        fontWeight={500}
+                        sx={{cursor:'pointer', textDecorationLine:'underline'}}
+                        fontSize="0.85rem"
+                        color="#617480"
+
+                        >
+                            TROCAS E DEVOLUÇÕES
+                        </Typography>
+
+                    </Box>
                 </Card>
             </Container>
         </section>
