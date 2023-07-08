@@ -1,4 +1,6 @@
 # NItekiShop_Challenge
+![Prototipo](./public/ProjectImage.png)
+
 ### Neste projeto (challenge) eu desenvolvi o website que dei o nome de <code>Niteki Shop</code> com as funcionalidades principais propostas no challange que erram:
 <li>Ao clicar em um produto da lista, exiba uma página com detalhes completes
 do produto, incluindo nome, preço, descrição, etc.</li>
