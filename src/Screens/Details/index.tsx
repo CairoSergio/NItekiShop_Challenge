@@ -24,7 +24,7 @@ export default function Details(){
             <AppHeader/>
             <Toolbar/>
             <Toolbar/>
-            <Container>
+            <Container sx={{pb:3}}>
                 <Button 
                     href='/'
                     variant="contained" 
@@ -61,7 +61,7 @@ export default function Details(){
                                 Este produto esta disponivel apenas para a(as) cidade(s) de {ParsedProduct.location.replace('Moçambique, ', '')}
                             </Typography>
                         </Box>
-                        <Button onClick={handleAddProduct} variant='contained' sx={{gap: 1.5}}>
+                        <Button onClick={handleAddProduct} variant='contained' sx={{gap: 1.5, mt:2}}>
                             Adicionar ao carinho
                             <ShoppingCartIcon sx={{fontSize:'1rem'}}/>
                         </Button>

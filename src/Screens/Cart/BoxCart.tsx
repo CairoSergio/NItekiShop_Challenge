@@ -6,26 +6,26 @@ import { FormatNumber } from '../../utils/FormatNumer';
 import removePraduct from '../../utils/removeProduct';
 import { useDispatch } from 'react-redux';
 import { targetProduct } from '../../Features/Products/ProductsSlice';
-interface BoxCartProps {
+import { useMediaQuery } from '@mui/material';
 
-}
 export default function BoxCart(props : productInerface){
+    const isLargeScreen = useMediaQuery('(max-width: 1200px)');
+    const isSmallScreen = useMediaQuery('(max-width: 445px)');
     const dispatch = useDispatch()
     const handleremove = () =>{
         removePraduct(props)
         dispatch(targetProduct())
     }
     return(
-        <Card sx={{width:'44rem', display:'flex',height:'15.5rem'}}>
-            <Box width="18rem">
+        <Card  sx={{width: 'fit-content', display:{lg:'flex'},height:{lg:'15.5rem'}}}>
+            <Box width={`${isSmallScreen ? "100%" : '18rem'}`}>
                 <CardMedia
                     component="img"
-                    width='18rem'
-                    height="100%"
+                    style={{ width: isSmallScreen ? '100%' : isLargeScreen ? '26rem' : '', height: isLargeScreen ? '20rem' : isSmallScreen ? '' : '100%' }}
                     image={props.image}
                 />
             </Box>
-            <Box height="100%" width='26rem' p="0.8rem" display="flex" flexDirection="column" justifyContent="space-between">
+            <Box component="div" style={{ width: isSmallScreen ? '' : '26rem'}} height="100%" p="0.8rem" display="flex" flexDirection="column" justifyContent="space-between">
                 <Box width="100%">
                     <Box display="flex" alignItems="center" width="100%" justifyContent="space-between">
                         <Typography color="#3F4046" fontSize="1rem" fontWeight="400">
@@ -41,7 +41,7 @@ export default function BoxCart(props : productInerface){
                         {props.description}
                     </Typography>
                 </Box>
-                <Typography alignSelf="end" fontWeight="700" color="#2E2F37" fontSize="1rem">
+                <Typography alignSelf="end" mt={1.8} fontWeight="700" color="#2E2F37" fontSize="1rem">
                     {FormatNumber(props.price)}.00MT
                 </Typography>
             </Box>

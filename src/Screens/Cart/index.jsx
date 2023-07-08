@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardMedia, Container, Divider, IconButton, Toolbar, Typography } from "@mui/material";
+import { Box, Button, Card, CardMedia, Container, Divider, Grid, IconButton, Toolbar, Typography, useMediaQuery } from "@mui/material";
 import AppHeader from "../../Components/Header";
 import getProductsCart from "../../utils/GetProductsCart";
 import BackPackIcon from '@mui/icons-material/ArrowBack'
@@ -11,15 +11,17 @@ import BoxCart from "./BoxCart";
 export default function Cart(){
     const Produtos  =useSelector(state => state.product.product)
     const Total = CalcularPrecoTotal(Produtos)
-    console.log(Produtos)
+    const isLargeScreen = useMediaQuery('(max-width: 1200px)');
+    const ismediumScreen = useMediaQuery('(max-width: 890px)');
+    const isSmallScreen = useMediaQuery('(max-width: 445px)');
     return(
 
         <section>
             <AppHeader/>
             <Toolbar/>
             <Toolbar/>
-            <Container  sx={{pb: '3rem',display:"flex", gap:'4.44rem'}}>
-                <Box width="44rem">
+            <Container  style={{flexDirection: ismediumScreen && 'column'}} sx={{justifyContent:'space-between',pb: '3rem',display:"flex", gap:'4.44rem'}}>
+                <Box sx={{width: isLargeScreen ? 'auto' :'44rem'}}>
                     <Button href="/" variant="contained"  sx={RoundedButtomClass}>
                         <BackPackIcon/>
 
@@ -34,7 +36,7 @@ export default function Cart(){
                             {FormatNumber(Total)}.00MT
                         </Typography>
                     </Typography>
-                    <Box display="flex" flexDirection="column" gap="1.88rem" mt="1.8rem">
+                    <Box display={"flex"} flexDirection="column" gap="1.88rem" mt="1.8rem">
                         {
                             Produtos.length ?
                             (
@@ -50,7 +52,7 @@ export default function Cart(){
                         }
                     </Box>
                 </Box>
-                <Card sx={{position:'sticky',top:'105px',py:'1.5rem',px:'1.5rem',width:'22rem', height:'35rem'}}> 
+                <Card sx={{position:'sticky',top:'105px',py:'1.5rem',px:'1.5rem',width: isSmallScreen ? '100%' : '22rem', height:isSmallScreen ? 'fit-content' : '35rem'}}> 
                     <Typography color="#2E2F37" fontSize="1rem" fontWeight="700">
                         RESUMO DO PEDIDO
                     </Typography>
