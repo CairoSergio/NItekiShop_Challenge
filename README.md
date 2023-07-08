@@ -1,5 +1,7 @@
 # NItekiShop_Challenge
 ![Prototipo](./public/ProjectImage.png)
+![Prototipo](./public/ProjectImage1.png)
+![Prototipo](./public/ProjectImage2.png)
 
 ### Neste projeto (challenge) eu desenvolvi o website que dei o nome de <code>Niteki Shop</code> com as funcionalidades principais propostas no challange que erram:
 <li>Ao clicar em um produto da lista, exiba uma página com detalhes completes
@@ -47,3 +49,8 @@ yarn install
 ```bash
 yarn dev
 ```
+# Deploy
+### Você pode tambem acessar o projeto em dempo real atravaz do link <a>nitekishop.vercel.app</a>
+
+# Conacto
+### Em caso de duvidas entre em contacto comigo aravez do meu email cairosergiondava@gmail.com4
