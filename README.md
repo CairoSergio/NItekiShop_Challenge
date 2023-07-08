@@ -53,8 +53,8 @@ yarn dev
 <br/>
 
 # Deploy
-#### Você pode tambem acessar o projeto em dempo real atravaz do link: [nitekishop.vercel.app](nitekishop.vercel.app)
+#### Você pode tambem acessar o projeto em dempo real atravaz do link: [nitekishop.vercel.app](https://nitekishop.vercel.app)
 
 # Conacto
-#### Em caso de duvidas entre em contacto comigo atravez do meu email: [cairosergiondava@gmail.com](cairosergiondava@gmail.com)
+#### Em caso de duvidas entre em contacto comigo atravez do meu email: [cairosergiondava@gmail.com](mailto:cairosergiondava@gmail.com)
 
