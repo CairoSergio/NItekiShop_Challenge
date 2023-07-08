@@ -20,6 +20,7 @@ no carrinho e remover produtos do carrinho.</li>
 # Tecnologias usadas
 <li>Typescript</li>
 <li>Javascript</li>
+<li>Redux / Redux Toolkit</li>
 <li>Materil UI</li>
 <li>Css</li>
 
