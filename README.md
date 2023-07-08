@@ -3,7 +3,7 @@
 ![Prototipo](./public/ProjectImage1.png)
 ![Prototipo](./public/ProjectImage2.png)
 
-### Neste projeto (challenge) eu desenvolvi o website que dei o nome de <code>Niteki Shop</code> com as funcionalidades principais propostas no challange que erram:
+#### Neste projeto (challenge) eu desenvolvi o website que dei o nome de <code>Niteki Shop</code> com as funcionalidades principais propostas no challenge que erram:
 <li>Ao clicar em um produto da lista, exiba uma página com detalhes completes
 do produto, incluindo nome, preço, descrição, etc.</li>
 <li>
@@ -15,7 +15,7 @@ no carrinho e remover produtos do carrinho.</li>
 <li>Perquisa do produto pelo nome</li>
 <li>Filtro do produto quano ao tipo de produto</li>
 
-### É de notar que dexei o erb site 100% responssivo prodendo se adaptar a telas maiores até telas menores.
+#### É de notar que dexei o site 100% responssivo podendo se adaptar a telas maiores até telas menores.
 
 # Tecnologias usadas
 <li>Typescript</li>
@@ -49,8 +49,11 @@ yarn install
 ```bash
 yarn dev
 ```
+<br/>
+
 # Deploy
-### Você pode tambem acessar o projeto em dempo real atravaz do link <a>nitekishop.vercel.app</a>
+#### Você pode tambem acessar o projeto em dempo real atravaz do link: [nitekishop.vercel.app](nitekishop.vercel.app)
 
 # Conacto
-### Em caso de duvidas entre em contacto comigo aravez do meu email cairosergiondava@gmail.com4
+#### Em caso de duvidas entre em contacto comigo atravez do meu email: [cairosergiondava@gmail.com](cairosergiondava@gmail.com)
+
