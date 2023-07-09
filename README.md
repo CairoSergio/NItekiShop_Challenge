@@ -13,7 +13,7 @@ no carrinho e remover produtos do carrinho.</li>
 
 ### Adicionais
 <li>Perquisa do produto pelo nome</li>
-<li>Filtro do produto quano ao tipo de produto</li>
+<li>Filtro do produto quato ao tipo de produto</li>
 
 #### É de notar que dexei o site 100% responssivo podendo se adaptar a telas maiores até telas menores.
 
@@ -22,12 +22,12 @@ no carrinho e remover produtos do carrinho.</li>
 <li>Javascript</li>
 <li>Redux / Redux Toolkit</li>
 <li>Materil UI</li>
-<li>Css</li>
+<li>CSS</li>
 
 <br>
 
 # Intalação
-1. Clone o reposiotio usando o seguinte comando
+1. Clone o repositorio usando o seguinte comando
 ```bash
 git clone https://github.com/CairoSergio/NItekiShop_Challenge.git
 ```
@@ -46,15 +46,15 @@ ou
 yarn install
 ```
 
-3. Inicialize o projeto
+4. Inicialize o projeto
 ```bash
 yarn dev
 ```
 <br/>
 
 # Deploy
-#### Você pode tambem acessar o projeto em dempo real atravaz do link: [nitekishop.vercel.app](https://nitekishop.vercel.app)
+#### Você pode tambem acessar o projeto em tempo real atravez do link: [nitekishop.vercel.app](https://nitekishop.vercel.app)
 
-# Conacto
+# Contacto
 #### Em caso de duvidas entre em contacto comigo atravez do meu email: [cairosergiondava@gmail.com](mailto:cairosergiondava@gmail.com)
 
